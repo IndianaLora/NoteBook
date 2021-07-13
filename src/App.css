@@ -1,0 +1,29 @@
+.li-removal{
+  list-style: none;
+  margin: 1rem;
+}
+.check{
+  text-decoration: line-through;
+}
+.uncheck{
+  text-decoration: none;
+}
+.hidden-input{
+  visibility: hidden;
+}
+#e-input{
+  display: flex;
+}
+/* const removeItem = (itemId) => {
+  var removeList = item.filter(function (itemSelected) {
+    return itemSelected.id !== itemId;
+  });
+  setItem(removeList);
+};
+// const editItem = (itemId) => {
+
+// };
+const checkItem = (itemToCheck) => {
+  var checkItem = itemToCheck;
+  checkItem.classList = "check";
+}; */
