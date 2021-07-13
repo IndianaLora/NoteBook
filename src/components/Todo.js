@@ -45,8 +45,9 @@ function Todo() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Write your productivity list! ☺</h1>
+      
       <form
         onSubmit={(event) => {
           handleSubmit(event, input);
@@ -57,11 +58,14 @@ function Todo() {
           onChange={(event) => setInput(event.target.value)}
           value={input}
           placeholder="Write your todo!"
+
         />
         <button type="submit" value="submit">
           Add item
         </button>
       </form>
+      <div className='todo-container'>
+ 
       {show ? (
         <input
           type="text"
@@ -70,9 +74,11 @@ function Todo() {
           placeholder="Edit your todo!"
         />
       ) : null}
+            <div className='todo'>
       {item.map((items) => {
         return (
-          <>
+         
+          <div className='todo-element'>
             <h5 key={items.id}>
               {items.item}
               <input
@@ -81,8 +87,10 @@ function Todo() {
                   checkItem(event.target.parentElement, event.target.checked);
                 }}
               />
+              
+          
             </h5>
-
+            <div className='button-container'>
             <button
               onClick={() => {
                 editItem(items.id, edit);
@@ -97,9 +105,14 @@ function Todo() {
             >
               <i className="fas fa-trash-alt"></i>
             </button>
-          </>
+            </div>
+            </div>
+        
         );
       })}
+      <div/>
+      </div>
+      </div>
     </div>
   );
 }

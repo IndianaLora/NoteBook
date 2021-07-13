@@ -1,29 +1,72 @@
-.li-removal{
-  list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./img/background.jpg");
+}
+.container {
+  margin: 5rem auto;
+  height: fit-content;
+  width: fit-content;
+  color: #223545;
+  background-color: #fff;
+  border: 5px solid #7ca698;
+  border-radius: 5%;
+}
+.container > h1 {
   margin: 1rem;
 }
-.check{
+.container > form {
+  margin: 2rem;
+}
+.todo {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.todo-element {
+  display: flex;
+  flex-direction: row;
+}
+.todo-element:nth-child(1n + 2) {
+  background: rgb(85, 170, 226);
+}
+.todo-element:nth-child(2n + 1) {
+  color: #fff;
+  background: rgb(63, 90, 177);
+}
+.todo-element:nth-child(3n + 1) {
+  background: rgb(173, 194, 250);
+}
+.todo-element:nth-child(4n + 1) {
+  color: #fff;
+  background: rgb(13, 133, 170);
+}
+.button-container {
+  margin: 2rem;
+}
+.button-container button {
+  font-size: 20px;
+  margin: 0.1rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgb(20, 1, 54);
+}
+.todo input {
+  margin: 0.4rem;
+}
+.todo h5 {
+  font-size: 20px;
+  display: flex;
+  flex-grow: 1;
+  margin: 2rem;
+  height: 30px;
+}
+.check {
   text-decoration: line-through;
 }
-.uncheck{
+.uncheck {
   text-decoration: none;
 }
-.hidden-input{
-  visibility: hidden;
-}
-#e-input{
-  display: flex;
-}
-/* const removeItem = (itemId) => {
-  var removeList = item.filter(function (itemSelected) {
-    return itemSelected.id !== itemId;
-  });
-  setItem(removeList);
-};
-// const editItem = (itemId) => {
-
-// };
-const checkItem = (itemToCheck) => {
-  var checkItem = itemToCheck;
-  checkItem.classList = "check";
-}; */
